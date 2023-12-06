@@ -19,10 +19,14 @@ from io import BytesIO
 
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+import os
 
-OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
+
+OPENAI_API_KEY=os.environ["AZURE_OPENAI_API_KEY"]
+# Load environment variables from .env file
+# load_dotenv()
+
+# OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
 
 
 # text_splitter and system template
